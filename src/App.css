@@ -4,15 +4,15 @@
   background-repeat: no-repeat;
   border: 10px solid #0c52aa;
   border-radius: 10px;
-  width: 25%;
-  height: 640px;
+  width: 350px;
+  height: 600px;
   margin: 1em auto;
 }
 .img{
   /* border: 10px solid rgb(128, 127, 127); */
   width: 60%;
   height: 220px;
-  margin: 7.5em auto 6em auto;
+  margin: 6em auto 3.5em auto;
   border-radius: 50%;
   text-align: center;
 }

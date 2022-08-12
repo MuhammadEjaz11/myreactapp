@@ -42,7 +42,7 @@ class Mainpage extends React.Component {
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  
+
                 </div>
               </div>
             </div>
@@ -51,8 +51,8 @@ class Mainpage extends React.Component {
 
 
         </div>
-        </div>
-        )
+      </div>
+    )
   }
 }
-        export default Mainpage;
+export default Mainpage;
