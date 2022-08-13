@@ -74,9 +74,6 @@ class Mainpage extends Component {
       <div className='major'>
         {!!this.state.users.length ? this.state.users.map((el) =>
           <div key={el.id} >
-          
-
-
             <div className='idcard'>
               <div className="img">
                 <img className='img1' src={el.image}  alt="" />
