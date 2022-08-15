@@ -99,12 +99,12 @@ class Mainpage extends Component {
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                       </div>
                       <div class="modal-body">
-                        <p>{el.firstName} </p>
-                        <p>{el.lastName}</p>
-                        <p>{el.email}</p>
-                        <p>{el.phone}</p>
-                        <p>{el.birthDate}</p>
-                        <p>{el.department}</p>
+                        <p>First Name: {el.firstName} </p>
+                        <p>Last Name: {el.lastName}</p>
+                        <p>Email: {el.email}</p>
+                        <p>Phone Number: {el.phone}</p>
+                        <p>Date of birth: {el.birthDate}</p>
+                        <p>Departmetn: {el.department}</p>
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
