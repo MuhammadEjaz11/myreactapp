@@ -104,7 +104,7 @@ class Mainpage extends Component {
                         <p>Email: {el.email}</p>
                         <p>Phone Number: {el.phone}</p>
                         <p>Date of birth: {el.birthDate}</p>
-                        <p>Departmetn: {el.department}</p>
+                        <p>Department: {el.department}</p>
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
