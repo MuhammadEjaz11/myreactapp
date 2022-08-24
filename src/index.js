@@ -3,11 +3,14 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import Mainpage from './App';
 import reportWebVitals from './reportWebVitals';
+import Todos from './todo'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Mainpage />
+  
+    <Todos />
+   
   </React.StrictMode>
 );
 
