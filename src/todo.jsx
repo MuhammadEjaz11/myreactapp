@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 class Todos extends Component {
     state = {
         todos: [{title: "ejaz", edit: false},{title: "anas",edit: false }, {title: "owais",edit: false}],
-        value: ''
+        value: '',
+        editvalue: ''
     }
     Addtodos = ()=>{
      console.log(this.state.value)
@@ -19,6 +20,15 @@ class Todos extends Component {
         this.state.todos[index].edit = true
         this.setState({todos: this.state.todos})
     }
+    edittab(index){
+        this.state.todos[index].edit = false;
+        this.setState({todos: this.state.todos})
+    }
+    handlechange(e,index){
+        this.state.todos[index].title = e.target.value;
+        
+        console.log(e.target.value,index)
+    }
     render() {
         return (
 
@@ -27,8 +37,10 @@ class Todos extends Component {
                 <button onClick={this.Addtodos}>Add Todo</button>
                 <ul>
                     {this.state.todos.map((value, index) => {
-                        return (<li key={index}>{value.edit ? <input type="text" placeholder='Edit Value'/>: value.title } <button onClick={()=>{this.deleteTodo(index)}}>Delete</button>
-                        <button onClick={()=>{this.edittodo(index)}}>Edit</button></li> )
+                        return (<li key={index}>{value.edit ?
+                         <input  onChange={(e)=>{this.handlechange(e,index)}} type="text" placeholder='Edit Value'/>: value.title } 
+                        <button onClick={()=>{this.deleteTodo(index)}}>Delete</button>
+                        {value.edit ? <button onClick={()=>{this.edittab(index)}}>Update</button>:<button onClick={()=>{this.edittodo(index)}}>Edit</button> }</li> )
                     })}
                 </ul>
 
