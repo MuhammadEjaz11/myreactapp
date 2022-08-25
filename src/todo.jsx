@@ -38,7 +38,7 @@ class Todos extends Component {
                 <ul>
                     {this.state.todos.map((value, index) => {
                         return (<li key={index}>{value.edit ?
-                         <input  onChange={(e)=>{this.handlechange(e,index)}} type="text" placeholder='Edit Value'/>: value.title } 
+                         <input onChange={(e)=>{this.handlechange(e,index)}} type="text"  placeholder='Edit Value'/>: value.title } 
                         <button onClick={()=>{this.deleteTodo(index)}}>Delete</button>
                         {value.edit ? <button onClick={()=>{this.edittab(index)}}>Update</button>:<button onClick={()=>{this.edittodo(index)}}>Edit</button> }</li> )
                     })}
