@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import "./todo.css"
 
 class Todos extends Component {
     state = {
@@ -32,17 +33,20 @@ class Todos extends Component {
     render() {
         return (
 
-            <div>
-                <input type="text" value={this.state.value} onChange={(e)=>{this.setState({value: e.target.value})}} placeholder='Entre Todo' />
-                <button onClick={this.Addtodos}>Add Todo</button>
+            <div className='Maindiv'>
+                <input className='input' type="text" value={this.state.value} onChange={(e)=>{this.setState({value: e.target.value})}} placeholder='Entre Todo' />
+                <button className='btn2' onClick={this.Addtodos}>Add Todo</button>
+                <div className="list">
+
                 <ul>
                     {this.state.todos.map((value, index) => {
                         return (<li key={index}>{value.edit ?
                          <input onChange={(e)=>{this.handlechange(e,index)}} type="text"  placeholder='Edit Value'/>: value.title } 
-                        <button onClick={()=>{this.deleteTodo(index)}}>Delete</button>
-                        {value.edit ? <button onClick={()=>{this.edittab(index)}}>Update</button>:<button onClick={()=>{this.edittodo(index)}}>Edit</button> }</li> )
+                        <button className='btn1' onClick={()=>{this.deleteTodo(index)}}>Delete</button>
+                        {value.edit ? <button className='btn1' onClick={()=>{this.edittab(index)}}>Update</button>:<button className='btn1' onClick={()=>{this.edittodo(index)}}>Edit</button> }</li> )
                     })}
                 </ul>
+                </div>
 
             </div>
         )

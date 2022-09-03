@@ -1,0 +1,64 @@
+.Maindiv{
+    width: 550px;
+    border: 10px solid rgb(43, 0, 185);
+    margin: 10px auto;
+    height: 400px;
+    padding: 1em;
+    border-radius: 20px;
+    background-image: linear-gradient(to right, rgb(37, 122, 172),rgb(4, 160, 195), rgb(0, 236, 249));
+}
+.input{
+    width: 350px;
+    border-radius: 20px;
+    border: none;
+    padding: 0.5em;
+    background-color: rgb(190, 245, 252);
+    margin: 10px;
+}
+.input:focus{
+    outline: none;
+}
+.btn1{
+padding: 0.5em;
+border-radius: 20px;
+border: none;
+background-color: rgb(90, 172, 255);
+width: 100px;
+transition: 0.4s;
+font-weight: 500;
+margin: 10px;
+font-size: 0.6em;
+}
+.btn1:hover{
+    cursor: pointer;
+    background-color: rgb(12, 128, 243);
+}
+.btn2{
+    padding: 0.5em;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(90, 172, 255);
+    width: 100px;
+    transition: 0.4s;
+    font-weight: 500;
+    margin: 10px;
+    font-size: 0.9em;
+    }
+    .btn2:hover{
+        cursor: pointer;
+        background-color: rgb(12, 128, 243);
+    }
+.list{
+   color: white;
+   font-weight: bold;
+    /* border: 1px solid black; */
+    height: 300px;
+    overflow-y: scroll;
+    
+}
+.list::-webkit-scrollbar{
+    display: none;
+}
+.list ul li{
+    font-size: 1.8em;
+}
