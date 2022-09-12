@@ -5,11 +5,12 @@ import Mainpage from './App';
 import reportWebVitals from './reportWebVitals';
 import Todos from './todo'
 import Login from './loginpage';
+import Signup from './loginpage2';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-
+    <Signup />
     <Login />
    
   </React.StrictMode>

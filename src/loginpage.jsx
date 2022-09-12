@@ -30,6 +30,7 @@ class Login extends React.Component{
             // ..
           });
           this.setState({email:'',password:''})
+          alert("User Is Registerd")
           
     }
     render(){
