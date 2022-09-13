@@ -6,13 +6,23 @@ import reportWebVitals from './reportWebVitals';
 import Todos from './todo'
 import Login from './loginpage';
 import Signup from './loginpage2';
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Signup />
-    <Login />
-   
+    
+
+    <BrowserRouter>
+      
+      <Routes>
+
+        <Route path="/" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="todos" element={<Todos />} />
+      </Routes>
+    </BrowserRouter>
+    
   </React.StrictMode>
 );
 
