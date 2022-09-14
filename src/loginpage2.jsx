@@ -3,6 +3,8 @@ import React from 'react';
 import './login.css'
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import Todos from './todo';
+
 
 
 
@@ -10,7 +12,8 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 class Signup extends React.Component {
     state = {
         email: "",
-        password: ''
+        password: '',
+        user:null
     }
     handleChange = (e) => {
         const { name, value } = e.target;
@@ -26,6 +29,9 @@ class Signup extends React.Component {
                 const localuser = localStorage.setItem(user, "user")
 
                 alert("user Logged In")
+                console.log(userCredential.user.uid)
+                this.setState({user:userCredential.user.uid})
+                
             })
             .catch((error) => {
                 const errorCode = error.code;
@@ -37,12 +43,12 @@ class Signup extends React.Component {
 
     render() {
         return (
-            <div className='Maindiv div1'>
+            this.state.user ?<Todos/>: <div className='Maindiv div1'>
                 <h1>Log In</h1>
                 <input onChange={this.handleChange} autoComplete="off" className='input' type="text" placeholder='Email' name="email" id="email" />
                 <input onChange={this.handleChange} autoComplete="off" className='input' type="Password" placeholder='Password' name="password" id="password" />
 
-                <button onClick={this.handleSubmit} className='btn1'> <Link to='/todos'> Log In </Link></button>
+                <button onClick={this.handleSubmit} className='btn1'>  Log In </button>
                 <h5>Create an account? <Link to='/'> <span>Sign Up</span></Link></h5>
 
             </div>

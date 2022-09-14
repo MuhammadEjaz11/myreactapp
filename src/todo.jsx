@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import "./todo.css"
+import { Link } from "react-router-dom";
 
 class Todos extends Component {
     state = {
@@ -47,6 +48,7 @@ class Todos extends Component {
                     })}
                 </ul>
                 </div>
+                <button className='btn2'> <Link to='/'> Sign Out </Link></button>
 
             </div>
         )
