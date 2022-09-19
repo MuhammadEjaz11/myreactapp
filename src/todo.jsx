@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import "./todo.css"
 import { Link } from "react-router-dom";
+import Signup from './loginpage2';
 
 class Todos extends Component {
     state = {
@@ -31,7 +32,7 @@ class Todos extends Component {
         
         console.log(e.target.value,index)
     }
-    render() {
+    render(props) {
         return (
 
             <div className='Maindiv'>
@@ -48,7 +49,7 @@ class Todos extends Component {
                     })}
                 </ul>
                 </div>
-                <button className='btn2'> <Link to='/'> Sign Out </Link></button>
+                <button className='btn2' onClick={this.props.name} >Sign Out</button>
 
             </div>
         )

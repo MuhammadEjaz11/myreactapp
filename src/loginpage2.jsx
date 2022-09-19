@@ -28,11 +28,14 @@ class Signup extends React.Component {
                 const user = userCredential.user;
                 const localuser = localStorage.setItem(user, "user")
 
-                alert("user Logged In")
+                
                 console.log(userCredential.user.uid)
                 this.setState({user:userCredential.user.uid})
                 
             })
+            .then(
+                alert("user Logged In")
+            )
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
@@ -40,10 +43,13 @@ class Signup extends React.Component {
                 console.log(error.message,)
             });
     }
+    signout = ()=>{
+        this.setState({user:null, email:"", password:""})
+    }
 
     render() {
         return (
-            this.state.user ?<Todos/>: <div className='Maindiv div1'>
+            this.state.user ?<Todos name={this.signout}/>: <div className='Maindiv div1'>
                 <h1>Log In</h1>
                 <input onChange={this.handleChange} autoComplete="off" className='input' type="text" placeholder='Email' name="email" id="email" />
                 <input onChange={this.handleChange} autoComplete="off" className='input' type="Password" placeholder='Password' name="password" id="password" />
